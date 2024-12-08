@@ -7,12 +7,15 @@ author_profile: true
 
 {% include base_path %}
 
-{% for category in site.portfolio_category %}
+{% assign top_categories = "apps_tools,entrepreneurship" | split: "," %}
+{% assign academic_category = "academic_projects" %}
+
+{% for category in top_categories %}
   {% assign title_shown = false %}
-  {% assign sorted_posts = site.portfolio | where: "category", category[0] | sort: "date" | reverse %}
+  {% assign sorted_posts = site.portfolio | where: "category", category | sort: "date" | reverse %}
   {% for post in sorted_posts %}
     {% unless title_shown %}
-      <h2 style="margin-bottom: 1em;">{{ category[1].title }}</h2><hr style="margin-bottom: 2em;" />
+      <h2 style="margin-bottom: 1em;">{{ site.portfolio_category[category].title }}</h2><hr style="margin-bottom: 2em;" />
       {% assign title_shown = true %}
     {% endunless %}
     
@@ -26,16 +29,48 @@ author_profile: true
           <p class="archive__item-excerpt" style="font-size: 1em; margin-bottom: 0.3em;">{{ post.excerpt }}</p>
         {% endif %}
 
-        {% if post.date and post.end_date %}
-          <p class="page__meta" style="font-size: 0.8em; color: #666; margin-bottom: 0;">
-            {% if post.website %} <a href="{{ post.website }}" target="_blank" style="color: #2980b9;">Company Website</a> • {% endif %}
-            {{ post.date | date: "%Y" }} - {{ post.end_date | date: "%Y" }}
-            {% if post.venue %} • {{ post.venue }}{% endif %}
-            {% if post.role %} • {{ post.role }}{% endif %}
-          </p>
+        {% if post.category == 'entrepreneurship' %}
+          {% if post.date and post.end_date %}
+            <p class="page__meta" style="font-size: 0.8em; color: #666; margin-bottom: 0;">
+              {% if post.website %}<a href="{{ post.website }}" target="_blank" style="color: #2980b9;">Company Website</a> • {% endif %}
+              {{ post.date | date: "%Y" }} - {{ post.end_date | date: "%Y" }}
+              {% if post.venue %} • {{ post.venue }}{% endif %}
+              {% if post.role %} • {{ post.role }}{% endif %}
+            </p>
+          {% endif %}
+        {% elsif post.category == 'apps_tools' %}
+          {% if post.date and post.website %}
+            <p class="page__meta" style="font-size: 0.8em; color: #666; margin-bottom: 0;">
+              <a href="{{ post.website }}" target="_blank" style="color: #2980b9;">GitHub Repository</a> • {{ post.date | date: "%Y" }}
+            </p>
+          {% endif %}
         {% endif %}
       </article>
     </div>
   {% endfor %}
 {% endfor %}
+
+{% assign sorted_academic_posts = site.portfolio | where: "category", academic_category | sort: "date" | reverse %}
+{% if sorted_academic_posts.size > 0 %}
+  <h2 style="margin-bottom: 1em;">{{ site.portfolio_category[academic_category].title }}</h2><hr style="margin-bottom: 2em;" />
+  {% for post in sorted_academic_posts %}
+    <div class="list__item" style="margin-bottom: 1em;">
+      <article class="archive__item">
+        <h2 class="archive__item-title" style="margin-top: 0; margin-bottom: 0.3em;">
+          {% if post.project_id %}[{{ post.project_id }}] {% endif %}<a href="{{ base_path }}{{ post.url }}" style="color: #2980b9;">{{ post.title }}</a>
+        </h2>
+        
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt" style="font-size: 1em; margin-bottom: 0.3em;">{{ post.excerpt }}</p>
+        {% endif %}
+
+        {% if post.date and post.website %}
+          <p class="page__meta" style="font-size: 0.8em; color: #666; margin-bottom: 0;">
+            <a href="{{ post.website }}" target="_blank" style="color: #2980b9;">GitHub Repository</a> • {{ post.date | date: "%Y" }}
+          </p>
+        {% endif %}
+      </article>
+    </div>
+  {% endfor %}
+{% endif %}
 
