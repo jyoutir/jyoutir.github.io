@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-## Who I am, what I do, and where I’m going.
+## Who I am, what I do, and where I’m going
 
 Hi, I’m a Mathematics student in the UK. I love maths and coding. 
 I spend most of my time solving problems and trying to create solutions that help people.
