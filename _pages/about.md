@@ -1,15 +1,21 @@
 ---
 permalink: /
-title: "Jyoutir Raj"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-## Who I am, what I do, and where I’m going
+<div style="margin-top: 3em;">
+  <div style="margin-bottom: 2em;">
+    <button class="btn active" style="margin-right: 0.5em; font-size: 1.2em; padding: 8px 16px;"> Hi, I'm Jyoutir. </button>
+  </div>
+</div>
 
-Hi, I’m a Mathematics student in the UK. I love maths and coding. 
+## Who I am, what I do, and where I'm going
+
+I'm a Mathematics student in the UK. I love maths and coding. 
 I spend most of my time solving problems and trying to create solutions that help people.
 Otherwise I like to read, cook, play piano, climb and make delicious coffee. 
 
@@ -19,9 +25,46 @@ Until then, I hope to keep my childish curiosity and love for reading alive, and
 
 ## Website Structure
 
-- Publications: Academic work. Papers I have written/co-written [P₁, P₂, ..., Pₙ], or been acknowledged in [A₁, A₂, ..., Aₙ].
-- Portfolio: Mainly maths or coding projects. Websites, analysis tools, apps, affiliated academic work [I₁, I₂, ..., Iₙ]. Traditional entrepenurial work is denoted as [E₁, E₂, ..., Eₙ]
-- Literature: Book reviews, exploring research, occasional personal writing [L₁, L₂, ..., Lₙ].
+<div style="margin-top: 1em;">
+  <div style="margin-bottom: 1.5em;">
+    <span style="display:inline-block; width:120px;">
+      <a href="/publications/" class="btn" style="text-decoration: none;">Publications</a>
+    </span> My research: Publications I authored/co-authored are indexed by [P₁, P₂, …, Pₙ], &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while acknowledgements appear as [A₁, A₂, …, Aₙ].
+  </div>
+
+  <div style="margin-bottom: 1.5em;">
+    <span style="display:inline-block; width:95px;">
+      <a href="/portfolio/" class="btn" style="text-decoration: none;">Portfolio</a>
+    </span> Mainly my maths or coding stuff (websites, analysis tools, apps, affiliated &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; academic work) denoted [I₁, I₂, …, Iₙ]; entrepreneurial things labeled [E₁, E₂, …, Eₙ].
+  </div>
+
+  <div style="margin-bottom: 1.5em;">
+    <span style="display:inline-block; width:105px;">
+      <a href="/literature/" class="btn" style="text-decoration: none;">Literature</a>
+    </span> Books, academic research reviews, and occasional personal writings are &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enumerated as [L₁, L₂, …, Lₙ].
+  </div>
+</div>
+
+<style>
+.btn {
+  background-color: #2e5497;
+  border: 1px solid #2e5497;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  font-size: 0.8em;
+  display: inline-block;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  color: white;
+  text-decoration: none;
+}
+</style>
 
 ## Current Work/Research
 

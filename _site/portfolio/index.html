@@ -257,11 +257,13 @@
     
 
 <!-- Category Filter Buttons -->
-<div style="margin-bottom: 2em;">
 <div style="margin-top: 3em;">
-  <button class="btn active" onclick="filterCategory('apps_tools')" style="margin-right: 0.5em;">Apps & Tools</button>
-  <button class="btn" onclick="filterCategory('academic_projects')" style="margin-right: 0.5em;">Academic Projects</button>
-  <button class="btn" onclick="filterCategory('entrepreneurship')">Entrepreneurship</button>
+  <p style="font-size: 1em; color: #494949; margin-bottom: 1em;">Filter portfolio by type:</p>
+  <div style="margin-bottom: 2em;">
+    <button class="btn active" onclick="filterCategory('apps_tools')" style="margin-right: 0.5em;">Apps & Tools</button>
+    <button class="btn" onclick="filterCategory('academic_projects')" style="margin-right: 0.5em;">Academic Projects</button>
+    <button class="btn" onclick="filterCategory('entrepreneurship')">Entrepreneurship</button>
+  </div>
 </div>
 
 <div class="portfolio-container">
@@ -453,12 +455,12 @@
   background-color: #2e5497;
   border: 1px solid #2e5497;
   color: white;
-  padding: 12px 24px;  /* Increased padding */
+  padding: 10px 20px;  /* Changed from 12px 24px */
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.3s ease;
   opacity: 0.7;
-  font-size: 1.1em;  /* Larger text */
+  font-size: 1em;  /* Changed from 1.1em */
 }
 
 .btn:hover {

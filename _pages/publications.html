@@ -8,9 +8,12 @@ author_profile: true
 {% include base_path %}
 
 <!-- Category Filter Buttons -->
-<div style="margin-bottom: 2em;">
-  <button class="btn active" onclick="filterCategory('manuscripts')" style="margin-right: 0.5em;">Journal Articles</button>
-  <button class="btn" onclick="filterCategory('acknowledgments')">Acknowledgments</button>
+<div style="margin-top: 3em;">
+  <p style="font-size: 1em; color: #494949; margin-bottom: 1em;">Filter publications by type:</p>
+  <div style="margin-bottom: 2em;">
+    <button class="btn active" onclick="filterCategory('manuscripts')" style="margin-right: 0.5em;">My Research</button>
+    <button class="btn" onclick="filterCategory('acknowledgments')">Acknowledgments</button>
+  </div>
 </div>
 
 <div class="portfolio-container">
@@ -60,12 +63,12 @@ author_profile: true
   background-color: #2e5497;
   border: 1px solid #2e5497;
   color: white;
-  padding: 12px 24px;
+  padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.3s ease;
   opacity: 0.7;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .btn:hover {
