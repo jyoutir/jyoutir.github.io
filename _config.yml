@@ -350,3 +350,11 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+portfolio_category:
+  apps_tools:
+    title: 'Apps and Tools'
+  academic_projects:
+    title: 'Academic Projects'
+  entrepreneurship:
+    title: 'Entrepreneurship'
