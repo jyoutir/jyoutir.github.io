@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-<div style="margin-top: 3em;">
-  <div style="margin-bottom: 2em;">
-    <button class="btn active" style="margin-right: 0.5em; font-size: 1.2em; padding: 8px 16px;"> Hi, I'm Jyoutir. </button>
+<div>
+  <div>
+    <button class="btn active" style="margin-right: 0.5em; font-size: 1.2em; padding: 8px 16px;"> Hi, I'm Jyoutir </button>
   </div>
 </div>
 
@@ -67,4 +67,8 @@ Until then, I hope to keep my childish curiosity and love for reading alive, and
 </style>
 
 ## Current Work/Research
+
+Last update: 8th Dec 2024
+- Publish Wordbook on iOS and Android
+- Draft whitepaper on my video-game markets & NLP research
 
