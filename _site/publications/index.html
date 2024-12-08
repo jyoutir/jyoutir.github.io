@@ -256,66 +256,110 @@
     
     
 
-
-
-<!-- New style rendering if publication categories are defined -->
-
-  
-    
-    
-      
-        
-  
-    
-    
-      
-        
-  
-    
-    
-      
-      
-        <h2>Acknowledgments</h2><hr />
-        
-      
-      
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publication/2024-11-29-vrp" rel="permalink">An Elementary Approach to the Vehicle Routing Problem via Python and Google API
-</a>
-      
-    </h2>
-    
-    
-
-        
-          <p>Published in <i>American Journal of Operations Research</i>, 2024 </p>
-        
-
-    
-    <p class="archive__item-excerpt" itemprop="description"><p>[A₁] Acknowledged for assisting authors Lian, K.Q. et al. in creating an empirical data pipeline using the Google Directions API (Google Cloud) between nodes in Enniskillen, Fermanagh, greatly improving the paper’s scope.</p>
-</p>
-    
-    
-    
-      <p style="font-size: 75%"><a href=" https://doi.org/10.4236/ajor.2024.146009 ">Download Paper</a></p>
-    
-
-  </article>
+<!-- Category Filter Buttons -->
+<div style="margin-bottom: 2em;">
+  <button class="btn active" onclick="filterCategory('manuscripts')" style="margin-right: 0.5em;">Journal Articles</button>
+  <button class="btn" onclick="filterCategory('acknowledgments')">Acknowledgments</button>
 </div>
 
-    
+<div class="portfolio-container">
   
+    
+    
+    <div class="category-section books" style="display: none;">
+      <h2 style="margin-bottom: 1em;">Books</h2>
+      <hr style="margin-bottom: 2em;" />
+      
+      
+    </div>
+  
+    
+    
+    <div class="category-section manuscripts" >
+      <h2 style="margin-bottom: 1em;">Journal Articles</h2>
+      <hr style="margin-bottom: 2em;" />
+      
+      
+    </div>
+  
+    
+    
+    <div class="category-section acknowledgments" style="display: none;">
+      <h2 style="margin-bottom: 1em;">Acknowledgments</h2>
+      <hr style="margin-bottom: 2em;" />
+      
+      
+        <div class="list__item" style="margin-bottom: 1em;">
+          <article class="archive__item">
+            <h2 class="archive__item-title" style="margin-top: 0; margin-bottom: 0.3em;">
+              <a href="http://localhost:4000/publication/2024-11-29-vrp">An Elementary Approach to the Vehicle Routing Problem via Python and Google API</a>
+            </h2>
+            
+            
+              <p class="archive__item-excerpt" style="font-size: 1em; margin-bottom: 0.3em;">[A₁] Acknowledged for assisting authors Lian, K.Q. et al. in creating an empirical data pipeline using the Google Directions API (Google Cloud) between nodes in Enniskillen, Fermanagh, greatly improving the paper’s scope.</p>
+            
 
+            
+          </article>
+        </div>
+      
+    </div>
+  
+</div>
+
+<style>
+.portfolio-container {
+  position: relative;
+  min-height: 200px;
+}
+
+.category-section {
+  transition: opacity 0.3s ease;
+  width: 100%;
+}
+
+.btn {
+  background-color: #2e5497;
+  border: 1px solid #2e5497;
+  color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  font-size: 1.1em;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn.active {
+  background-color: #2e5497;
+  color: white;
+  border-color: #2e5497;
+  opacity: 1;
+}
+</style>
+
+<script>
+function filterCategory(category) {
+  // Update active button state
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  event.target.classList.add('active');
+  
+  // Toggle visibility of categories
+  document.querySelectorAll('.category-section').forEach(section => {
+    if (section.classList.contains(category)) {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+</script>
 
 
 
