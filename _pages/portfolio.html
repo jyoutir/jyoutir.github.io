@@ -39,7 +39,13 @@ author_profile: true
 
             {% if post.date and post.end_date %}
               <p class="page__meta">
-                {% if post.website %}<a href="{{ post.website }}" target="_blank">Company Website</a> • {% endif %}
+                {% if post.website %}
+                  {% if category[0] == "academic_projects" or category[0] == "apps_tools" %}
+                    <a href="{{ post.website }}" target="_blank">Github repo</a> • 
+                  {% else %}
+                    <a href="{{ post.website }}" target="_blank">Company Website</a> • 
+                  {% endif %}
+                {% endif %}
                 {{ post.date | date: "%Y" }} - {{ post.end_date | date: "%Y" }}
                 {% if post.venue %} • {{ post.venue }}{% endif %}
                 {% if post.role %} • {{ post.role }}{% endif %}

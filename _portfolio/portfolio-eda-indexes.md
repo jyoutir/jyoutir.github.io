@@ -4,5 +4,5 @@ excerpt: "Testing assumptions for Geometric Brownian Motion on Financial Indexes
 collection: portfolio
 category: academic_projects
 date: 2023-02-01
-website: https://github.com/jyoutir/eda-brownian-motion
+website: "https://github.com/jyoutir/eda-brownian-motion"
 ---
