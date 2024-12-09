@@ -260,9 +260,9 @@
 <div style="margin-top: 3em;">
   <p style="font-size: 1em; color: #494949; margin-bottom: 1em;">Filter portfolio by type:</p>
   <div style="margin-bottom: 2em;">
-    <button class="btn active" onclick="filterCategory('apps_tools')" style="margin-right: 0.5em;">Apps & Tools</button>
-    <button class="btn" onclick="filterCategory('academic_projects')" style="margin-right: 0.5em;">Academic Projects</button>
-    <button class="btn" onclick="filterCategory('entrepreneurship')">Entrepreneurship</button>
+    <button class="btn active" onclick="filterCategory(event, 'apps_tools')" style="margin-right: 0.5em;">Apps & Tools</button>
+    <button class="btn" onclick="filterCategory(event, 'academic_projects')" style="margin-right: 0.5em;">Academic Projects</button>
+    <button class="btn" onclick="filterCategory(event, 'entrepreneurship')">Entrepreneurship</button>
   </div>
 </div>
 
@@ -505,7 +505,7 @@ a {
 </style>
 
 <script>
-function filterCategory(category) {
+function filterCategory(event, category) {
   // Update active button state
   document.querySelectorAll('.btn').forEach(btn => {
     btn.classList.remove('active');
@@ -555,7 +555,7 @@ function filterCategory(category) {
 
 <div class="page__footer-copyright">
   &copy; 2024 Jyoutir Raj, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated 2024-12-08
+  Site last updated 2024-12-09
 </div>
 
       </footer>
