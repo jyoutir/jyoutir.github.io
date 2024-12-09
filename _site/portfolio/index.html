@@ -256,21 +256,22 @@
     
     
 
-<!-- Category Filter Buttons -->
-<div style="margin-top: 3em;">
-  <p style="font-size: 1em; color: #494949; margin-bottom: 1em;">Filter portfolio by type:</p>
-  <div style="margin-bottom: 2em;">
-    <button class="btn active" onclick="filterCategory(event, 'apps_tools')" style="margin-right: 0.5em;">Apps & Tools</button>
-    <button class="btn" onclick="filterCategory(event, 'academic_projects')" style="margin-right: 0.5em;">Academic Projects</button>
-    <button class="btn" onclick="filterCategory(event, 'entrepreneurship')">Entrepreneurship</button>
+<!-- Navigation Buttons -->
+<div class="nav-container">
+  <p class="nav-title">Jump to section:</p>
+  <div class="nav-buttons">
+    <a href="#apps_tools" class="nav-btn">Apps & Tools</a>
+    <a href="#academic_projects" class="nav-btn">Academic Projects</a>
+    <a href="#entrepreneurship" class="nav-btn">Entrepreneurship</a>
   </div>
 </div>
 
+<!-- Content Sections -->
 <div class="portfolio-container">
   
     
     
-    <div class="category-section apps_tools ">
+    <div id="apps_tools" class="category-section">
       <h2>Apps and Tools</h2>
       <hr />
       
@@ -335,7 +336,7 @@
   
     
     
-    <div class="category-section academic_projects hidden">
+    <div id="academic_projects" class="category-section">
       <h2>Academic Projects</h2>
       <hr />
       
@@ -386,7 +387,7 @@
   
     
     
-    <div class="category-section entrepreneurship hidden">
+    <div id="entrepreneurship" class="category-section">
       <h2>Entrepreneurship</h2>
       <hr />
       
@@ -438,57 +439,58 @@
 </div>
 
 <style>
-.hidden {
-  display: none;
+.nav-container {
+  margin-top: 0;
+  position: relative;
+  background: white;
+  padding: 1em 0;
+  z-index: 100;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.nav-title {
+  font-size: 1em;
+  color: #494949;
+  margin-bottom: 1em;
+}
+
+.nav-buttons {
+  margin-bottom: 2em;
+}
+
+.nav-btn {
+  background-color: #2e5497;
+  border: 1px solid #2e5497;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  font-size: 1em;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.nav-btn:hover {
+  opacity: 0.85;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.nav-btn:visited {
+  color: white !important;
+  text-decoration: none !important;
 }
 
 .category-section {
-  transition: opacity 0.3s ease;
-  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  scroll-margin-top: 250px;
 }
 
-.btn {
-  background-color: #2e5497;
-  border: 1px solid #2e5497;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  opacity: 0.7;
-  font-size: 1em;
-}
-
-.btn:hover {
-  opacity: 0.85;
-}
-
-.btn.active {
-  background-color: #2e5497;
-  color: white;
-  border-color: #2e5497;
-  opacity: 1;
-}
+/* Removed specific font size and margin styles for text */
 </style>
-
-<script>
-function filterCategory(event, category) {
-  // Update active button state
-  document.querySelectorAll('.btn').forEach(btn => {
-    btn.classList.remove('active');
-  });
-  event.target.classList.add('active');
-  
-  // Toggle visibility of categories
-  document.querySelectorAll('.category-section').forEach(section => {
-    if (section.classList.contains(category)) {
-      section.classList.remove('hidden');
-    } else {
-      section.classList.add('hidden');
-    }
-  });
-}
-</script>
 
 
   </div>
