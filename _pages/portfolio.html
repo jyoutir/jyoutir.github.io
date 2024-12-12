@@ -17,7 +17,6 @@ author_profile: true
   </div>
 </div>
 
-<!-- Content Sections -->
 <div class="portfolio-container">
   {% for category in site.portfolio_category %}
     {% assign sorted_posts = site.portfolio | where: "category", category[0] | sort: "date" | reverse %}
@@ -37,15 +36,20 @@ author_profile: true
               <p class="archive__item-excerpt">{{ post.excerpt }}</p>
             {% endif %}
 
+            {% if post.website %}
+              {% if category[0] == "entrepreneurship" %}
+                <p class="website-link">
+                  <a href="{{ post.website }}" target="_blank">Company Website</a>
+                </p>
+              {% elsif category[0] == "apps_tools" or category[0] == "academic_projects" %}
+                <p class="website-link">
+                  <a href="{{ post.website }}" target="_blank">GitHub Repo</a>
+                </p>
+              {% endif %}
+            {% endif %}
+
             {% if post.date and post.end_date %}
               <p class="page__meta">
-                {% if post.website %}
-                  {% if category[0] == "academic_projects" or category[0] == "apps_tools" %}
-                    <a href="{{ post.website }}" target="_blank">Github repo</a> • 
-                  {% else %}
-                    <a href="{{ post.website }}" target="_blank">Company Website</a> • 
-                  {% endif %}
-                {% endif %}
                 {{ post.date | date: "%Y" }} - {{ post.end_date | date: "%Y" }}
                 {% if post.venue %} • {{ post.venue }}{% endif %}
                 {% if post.role %} • {{ post.role }}{% endif %}
@@ -109,6 +113,10 @@ author_profile: true
   scroll-margin-top: 250px;
 }
 
+.archive__item-excerpt {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
 /* Removed specific font size and margin styles for text */
 </style>
-

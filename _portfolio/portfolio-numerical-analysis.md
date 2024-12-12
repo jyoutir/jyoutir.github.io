@@ -1,6 +1,6 @@
 ---
 title: "Numerical Analysis Projects"
-excerpt: "Collection of numerical methods implementations and analysis"
+excerpt: "[MTH3023] Collection of numerical methods implementations and analysis"
 collection: portfolio
 category: academic_projects
 date: 2024-01-01
