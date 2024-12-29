@@ -356,3 +356,12 @@ portfolio_category:
     title: 'Academic Projects'
   entrepreneurship:
     title: 'Entrepreneurship'
+
+# Literature Categories
+literature_category:
+  books:
+    title: "Books"
+  paper_reviews:
+    title: "Paper Reviews"
+  writings:
+    title: "Personal Writings"

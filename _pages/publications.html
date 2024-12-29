@@ -11,7 +11,7 @@ author_profile: true
 <div class="nav-container">
   <p class="nav-title">Jump to section:</p>
   <div class="nav-buttons">
-    <a href="#manuscripts" class="nav-btn" style="margin-right: 0.5em;">My Research</a>
+    <a href="#manuscripts" class="nav-btn">My Research</a>
     <a href="#acknowledgments" class="nav-btn">Acknowledgments</a>
   </div>
 </div>
@@ -23,7 +23,6 @@ author_profile: true
     
     <div id="{{ category[0] }}" class="category-section">
       <h2>{{ category[1].title }}</h2>
-      <hr />
       
       {% for post in sorted_pubs %}
         <div class="list__item">
@@ -56,7 +55,6 @@ author_profile: true
   background: white;
   padding: 1em 0;
   z-index: 100;
-  border-bottom: 1px solid #f2f2f2;
 }
 
 .nav-title {
@@ -94,16 +92,85 @@ author_profile: true
   text-decoration: none !important;
 }
 
+/* Style for main section headers with increased spacing */
 .category-section {
-  margin-bottom: 3em;
-  scroll-margin-top: 150px; /* Adjusts scroll position for sticky header */
+  margin-top: 6em;  /* Add space above each section */
 }
 
+/* Remove margin from first section */
+.category-section:first-of-type {
+  margin-top: 2em;  /* Less space for first section */
+}
+
+.category-section > h2 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+/* Remove underlines from project titles and links */
+.archive__item-title a,
+.list__item h2 a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.page__meta a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Add these new styles for content text */
 .archive__item-excerpt {
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.5;
+  color: #494949;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  display: inline;  /* Keep text inline */
 }
 
+.page__meta {
+  font-size: 0.9em;
+  color: #646769;
+}
+
+/* Update link styles */
+a[href*="github"],
+.repo-link,
+.archive__item a {
+  color: #2e5497;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+a[href*="github"]:hover,
+.repo-link:hover,
+.archive__item a:hover {
+  opacity: 0.85;
+  text-decoration: underline !important;
+}
+
+/* Make sure inline links stay inline */
+.archive__item-excerpt-container {
+  margin-bottom: 0.5em;
+}
+
+.archive__item-excerpt a {
+  display: inline;
+}
+
+/* Update existing link styles to match */
+.repo-link {
+  color: #2e5497;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.repo-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
 </style>
 
 

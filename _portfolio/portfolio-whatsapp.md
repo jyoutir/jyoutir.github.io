@@ -1,6 +1,6 @@
 ---
 title: "WhatsApp Analysis"
-excerpt: "[I₂] WhatsApp chat analysis and visualisation tool<br/>"
+excerpt: "[I₂] WhatsApp chat analysis and visualisation tool"
 collection: portfolio
 category: apps_tools
 date: 2024-01-01

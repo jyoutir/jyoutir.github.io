@@ -23,7 +23,6 @@ author_profile: true
     
     <div id="{{ category[0] }}" class="category-section">
       <h2>{{ category[1].title }}</h2>
-      <hr />
       
       {% for post in sorted_posts %}
         <div class="list__item">
@@ -32,21 +31,15 @@ author_profile: true
               {% if post.project_id %}[{{ post.project_id }}] {% endif %}<a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
             </h2>
             
-            {% if post.excerpt %}
-              <p class="archive__item-excerpt">{{ post.excerpt }}</p>
-            {% endif %}
-
-            {% if post.website %}
-              {% if category[0] == "entrepreneurship" %}
-                <p class="website-link">
-                  <a href="{{ post.website }}" target="_blank">Company Website</a>
-                </p>
-              {% elsif category[0] == "apps_tools" or category[0] == "academic_projects" %}
-                <p class="website-link">
-                  <a href="{{ post.website }}" target="_blank">GitHub Repo</a>
+            <div class="archive__item-excerpt-container">
+              {% if post.excerpt %}
+                <p class="archive__item-excerpt">
+                  {{ post.excerpt }}
+                  {% if post.company_website %} • <a href="{{ post.company_website }}" class="repo-link" target="_blank">Company Website</a>{% endif %}
+                  {% if post.website %} • <a href="{{ post.website }}" class="repo-link" target="_blank">GitHub Repo</a>{% endif %}
                 </p>
               {% endif %}
-            {% endif %}
+            </div>
 
             {% if post.date and post.end_date %}
               <p class="page__meta">
@@ -63,13 +56,13 @@ author_profile: true
 </div>
 
 <style>
+/* Only keeping navigation button styles since they're functional */
 .nav-container {
   margin-top: 0;
   position: relative;
   background: white;
   padding: 1em 0;
   z-index: 100;
-  border-bottom: 1px solid #f2f2f2;
 }
 
 .nav-title {
@@ -107,16 +100,89 @@ author_profile: true
   text-decoration: none !important;
 }
 
+/* Style for main section headers with increased spacing */
 .category-section {
-  margin-top: 2em;
-  margin-bottom: 3em;
-  scroll-margin-top: 250px;
+  margin-top: 6em;  /* Add space above each section */
 }
 
+/* Remove margin from first section */
+.category-section:first-of-type {
+  margin-top: 2em;  /* Less space for first section */
+}
+
+.category-section > h2 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+/* Remove underlines from project titles and links */
+.archive__item-title a,
+.list__item h2 a,
+.website-link a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.repo-link {
+  color: #2e5497;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.repo-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+.archive__item-excerpt-container {
+  margin-bottom: 0.5em;
+}
+
+/* Add or update these specific styles */
+a[href*="github"],  /* Targets all GitHub links */
+.repo-link,
+.archive__item a {
+  color: #2e5497;
+  text-decoration: none !important;  /* Force remove underline */
+  border-bottom: none !important;
+}
+
+a[href*="github"]:hover,
+.repo-link:hover,
+.archive__item a:hover {
+  opacity: 0.85;
+  text-decoration: underline !important;  /* Only show underline on hover */
+}
+
+/* Make sure inline links stay inline */
 .archive__item-excerpt {
-  font-size: 1.1em;
-  line-height: 1.5;
+  display: inline;
 }
 
-/* Removed specific font size and margin styles for text */
+.archive__item-excerpt a {
+  display: inline;
+}
+
+/* Add these new styles for content text */
+.archive__item-excerpt {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #494949;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+}
+
+.page__meta {
+  font-size: 0.9em;
+  color: #646769;
+}
+
+/* Update existing link styles to match */
+.repo-link {
+  color: #2e5497;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
 </style>

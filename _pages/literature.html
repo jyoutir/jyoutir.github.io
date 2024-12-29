@@ -1,0 +1,123 @@
+---
+layout: archive
+title: "Literature"
+permalink: /literature/
+author_profile: true
+---
+
+{% include base_path %}
+
+<!-- Navigation Buttons -->
+<div class="nav-container">
+  <p class="nav-title">Jump to section:</p>
+  <div class="nav-buttons">
+    <a href="#books" class="nav-btn">Books</a>
+    <a href="#paper_reviews" class="nav-btn">Paper Reviews</a>
+    <a href="#writings" class="nav-btn">Personal Writings</a>
+  </div>
+</div>
+
+<div class="portfolio-container">
+  {% for category in site.literature_category %}
+    {% assign sorted_lit = site.literature | where: "category", category[0] | sort: "date" | reverse %}
+    
+    <div id="{{ category[0] }}" class="category-section">
+      <h2>{{ category[1].title }}</h2>
+      
+      {% for post in sorted_lit %}
+        <div class="list__item">
+          <article class="archive__item">
+            <h2 class="archive__item-title">
+              <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+            </h2>
+            
+            {% if post.excerpt %}
+              <p class="archive__item-excerpt">{{ post.excerpt }}</p>
+            {% endif %}
+
+            {% if post.date %}
+              <p class="page__meta">
+                {{ post.date | date: "%B %Y" }}
+                {% if post.author %} • {{ post.author }}{% endif %}
+                {% if post.rating %} • Rating: {{ post.rating }}/5{% endif %}
+              </p>
+            {% endif %}
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+.nav-container {
+  margin-top: 0;
+  position: relative;
+  background: white;
+  padding: 1em 0;
+  z-index: 100;
+}
+
+.nav-title {
+  font-size: 1em;
+  color: #494949;
+  margin-bottom: 1em;
+}
+
+.nav-buttons {
+  margin-bottom: 2em;
+}
+
+.nav-btn {
+  background-color: #2e5497;
+  border: 1px solid #2e5497;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  font-size: 1em;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.nav-btn:hover {
+  opacity: 0.85;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.nav-btn:visited {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Style for main section headers with increased spacing */
+.category-section {
+  margin-top: 6em;  /* Add space above each section */
+}
+
+/* Remove margin from first section */
+.category-section:first-of-type {
+  margin-top: 2em;  /* Less space for first section */
+}
+
+.category-section > h2 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+/* Remove underlines from project titles and links */
+.archive__item-title a,
+.list__item h2 a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.page__meta a {
+  text-decoration: none;
+  border-bottom: none;
+}
+</style>

@@ -1,6 +1,6 @@
 ---
 title: "Stochastic Processes and Risk Projects"
-excerpt: "[SOR3012] Implementation and analysis of stochastic processes for risk assessment"
+excerpt: "[SOR3012] Research for Fermanah Community Transport and portfolios for this module"
 collection: portfolio
 category: academic_projects
 date: 2024-03-01

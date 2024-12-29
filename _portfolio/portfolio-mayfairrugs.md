@@ -7,7 +7,8 @@ date: 2022-03-01
 end_date: 2024-09-30
 venue: "United Kingdom"
 role: "Co-founder"
-website: "https://mayfairrugs.co"
+company_website: "https://mayfairrugs.co"
+website: "https://github.com/jyoutir/emailer"
 ---
 
 <p>[E₂] Mayfair Rugs Global LTD exports hand-knotted rugs from India. My cousin, Aditya (aditya@mayfairrugs.co), oversees manufacturing in India and has built a strong client base across India.</p>
