@@ -9,12 +9,12 @@ redirect_from:
 
 ## Who I am, what I do, and where I'm going
 
-I'm a Mathematics student in the UK. I love maths and coding. 
+I'm a Mathematics student in the UK. I love maths and coding 🤓 ☝️. 
 I spend most of my time solving problems and trying to create solutions that people might like.
-Otherwise I like to read, cook, play piano, climb and make delicious coffee. 
+Otherwise I like to read, cook, play piano, write, climb and make yummy coffee. 
 
-When I retire, I want to run a coffee shop and roastery with a bookstore 🤓 ☝️. Maybe raise a cat.
-Until then, I hope to keep my curiosity and love for reading and research alive, continuing to make what excites.
+I will solve problems for people, do maths, and code until im 100. Maybe learn to roast coffee and start a roastery or raise a cat. 
+Above everything I'll continue reading, researching, and continue making what excites.
 
 ## Website Structure
 
@@ -24,7 +24,7 @@ Until then, I hope to keep my curiosity and love for reading and research alive,
   
 - **Literature**: Books, academic research notes/reviews, and occasional personal writings, enumerated as [L₁, L₂, …, Lₙ]. 
 
-## Current Work/Research
+## Current Work/Research milestones
 
 Last update: 29th Dec 2024
 - Publish Wordbook on iOS (android done!)
