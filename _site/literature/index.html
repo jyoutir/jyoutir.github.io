@@ -254,12 +254,183 @@
     
       <h1 class="page__title">Literature</h1>
     
-    <p>This is my literature page. Work In Progress. Upcoming:</p>
-<ul>
-  <li>Book reviews</li>
-  <li>Research paper reviews</li>
-  <li>Personal writings</li>
-</ul>
+    
+
+<!-- Main Description -->
+<div class="main-description">
+  <p>Kinda a diary to remember + keep track of books and literature I've read. I will update this slowly and gradually.</p>
+</div>
+
+<!-- Navigation Buttons -->
+<div class="nav-container">
+  <p class="nav-title">Jump to section:</p>
+  <div class="nav-buttons">
+    <a href="#book-reviews" class="nav-btn">Book Reviews</a>
+    <a href="#research-reviews" class="nav-btn">Research Reviews</a>
+    <a href="#personal-writings" class="nav-btn">Personal Writings</a>
+  </div>
+</div>
+
+<!-- Content Sections -->
+<div class="portfolio-container">
+  <!-- Book Reviews Section -->
+  <div id="book-reviews" class="category-section">
+    <h2>Book Reviews</h2>
+    <p>Book reviews and stuff</p>
+    
+    
+    
+      <div class="list__item">
+        <article class="archive__item">
+          <h2 class="archive__item-title">
+            <a href="http://localhost:4000/literature/the-counte-of-monte-cristo">[L₁] The Count of Monte Cristo - Alexandre Dumas</a>
+          </h2>
+          
+          
+            <p class="archive__item-excerpt">9.1/10</p>
+          
+        </article>
+      </div>
+    
+  </div>
+
+  <!-- Research Reviews Section -->
+  <div id="research-reviews" class="category-section">
+    <h2>Research Paper Reviews</h2>
+    <p>Papers I enjoyed reading</p>
+  </div>
+
+  <!-- Personal Writings Section -->
+  <div id="personal-writings" class="category-section">
+    <h2>Personal Writings</h2>
+    <p> Will maybe add some eventually. Most of my personal writing is on my X which is privat - request for it if you are a friend. </p>
+  </div>
+</div>
+
+<style>
+.nav-container {
+  margin-top: 0;
+  position: relative;
+  background: white;
+  padding: 1em 0;
+  z-index: 100;
+}
+
+.nav-title {
+  font-size: 1em;
+  color: #494949;
+  margin-bottom: 1em;
+}
+
+.nav-buttons {
+  margin-bottom: 2em;
+}
+
+.nav-btn {
+  background-color: #2e5497;
+  border: 1px solid #2e5497;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  font-size: 1em;
+  text-decoration: none !important;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.nav-btn:hover {
+  opacity: 0.85;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.nav-btn:visited {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Style for main section headers with increased spacing */
+.category-section {
+  margin-top: 6em;  /* Add space above each section */
+}
+
+/* Remove margin from first section */
+.category-section:first-of-type {
+  margin-top: 2em;  /* Less space for first section */
+}
+
+.category-section > h2 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+/* Remove underlines from project titles and links */
+.archive__item-title a,
+.list__item h2 a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.page__meta a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Add these new styles for content text */
+.archive__item-excerpt {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #494949;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  display: inline;  /* Keep text inline */
+}
+
+.page__meta {
+  font-size: 0.9em;
+  color: #646769;
+}
+
+/* Update link styles */
+a[href*="github"],
+.repo-link,
+.archive__item a {
+  color: #2e5497;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+a[href*="github"]:hover,
+.repo-link:hover,
+.archive__item a:hover {
+  opacity: 0.85;
+  text-decoration: underline !important;
+}
+
+/* Make sure inline links stay inline */
+.archive__item-excerpt-container {
+  margin-bottom: 0.5em;
+}
+
+.archive__item-excerpt a {
+  display: inline;
+}
+
+/* Update existing link styles to match */
+.repo-link {
+  color: #2e5497;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.repo-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+</style>
 
   </div>
 </div>
@@ -291,8 +462,8 @@
 
 
 <div class="page__footer-copyright">
-  &copy; 2024 Jyoutir Raj, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated 2024-12-30
+  &copy; 2025 Jyoutir Raj, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+  Site last updated 2025-01-14
 </div>
 
       </footer>
