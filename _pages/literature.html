@@ -9,7 +9,7 @@ author_profile: true
 
 <!-- Main Description -->
 <div class="main-description">
-  <p>Kinda a diary to remember + keep track of books and literature I've read. I will update this slowly and gradually.</p>
+  <p>This section primarily serves as a diary to remember & keep track of books and literature I've read. I will update this slowly and gradually.</p>
 </div>
 
 <!-- Navigation Buttons -->
@@ -27,8 +27,6 @@ author_profile: true
   <!-- Book Reviews Section -->
   <div id="book-reviews" class="category-section">
     <h2>Book Reviews</h2>
-    <p>Book reviews and stuff</p>
-    
     {% assign sorted_literature = site.literature | where: "type", "book-review" | sort: "date" | reverse %}
     {% for post in sorted_literature %}
       <div class="list__item">
@@ -54,7 +52,7 @@ author_profile: true
   <!-- Personal Writings Section -->
   <div id="personal-writings" class="category-section">
     <h2>Personal Writings</h2>
-    <p> Will maybe add some eventually. Most of my personal writing is on my X which is privat - request for it if you are a friend. </p>
+    <p> I may add some writings eventually, however the majority of my personal writing is on my X (private) - request for it if you are a friend </p>
   </div>
 </div>
 
