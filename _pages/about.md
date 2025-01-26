@@ -23,9 +23,10 @@ I hope to solve problems for people, do maths, and code until im 100.  Above all
   
 - **Literature**: Books, academic research notes/reviews, and occasional personal writings, enumerated as [L₁, L₂, …, Lₙ]. 
 
-## Current Work/Research milestones
+## Current Milestones
 
-Last update: 8th Jan 2025
-- Publish Wordbook on iOS (android done!)
-- Draft whitepaper on video-game markets & NLP research
-- Ace my linear model exam
+Last update: 26th Jan 2025
+- Submit paper to journals and get accepted
+- Fix Wordbook iOS issues  :<
+- Fully automate the content_creator agent to run over Febuary
+- Read more. specifically literature about R1
