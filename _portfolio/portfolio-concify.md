@@ -13,9 +13,10 @@ company_website: "https://www.concify.co"
 
 Concify is an elegant writing tool that solves my personal problem of brain dumping thoughts into coherent, well-structured text. Concify.co has:
 
-- **Versatile Writing Assistance**: Converts braindumps into various writing styles - from professional emails to academic writing and casual messages
-- **Beautiful User Experience**: Features a carefully crafted, visually stunning interface that makes the writing process a pleasure
-- **Context-Aware Formatting**: adapts the output based on the intended purpose of the text and follows the style of the user's writing
-- **Streamlined Workflow**: Allows users to quickly go from messy thoughts to polished, ready-to-use text
+- **speedy writing**: you braindump thoughts and the tool follows your writing style and turns it into the desired output style (email/academic/casual msg)
+- **really pretty UX**: its a joy to use. try it for yourself to see!
+- **context-aware formatting**: often ai tools change up writing style or add too much diplomatic wish-wash jargon. i hate this. so i make sure to avoid this so that 
+1) output is always in the style of the user's writing
+2) no extra mumbo jumbo words are used. its direct + straight to the point. 
 
-The project gives practical utility in an beautiful design. its just delightful to use. I hope this saves me a few seconds everyday over the next few years. 
+The project gives alot of utility in an beautiful design. it saves me from reusing the same specific prompts to refine my text everyday for the next few years. its just delightful and beautfiful to use. i will try to configure my mac mini to run a local model for free access for everyone since it's very computationally cheap.
